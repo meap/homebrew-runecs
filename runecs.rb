@@ -5,21 +5,21 @@
 class Runecs < Formula
   desc "Effortlessly Execute One-Off Tasks and Database Migrations in Your ECS Cluster"
   homepage "https://github.com/meap/runecs"
-  version "0.8.3"
+  version "0.9"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/meap/runecs/releases/download/v0.8.3/runecs_Darwin_x86_64.tar.gz"
-      sha256 "dff506dbcc45fa5e9d3c9b8aa2993f1bac48edf47707fed2feedf2a0576ea04e"
+      url "https://github.com/meap/runecs/releases/download/v0.9/runecs_Darwin_x86_64.tar.gz"
+      sha256 "33dd571bf89094e3c0300f2fbf667d74ab13c789630985a6e30ecb6f71b4a1df"
 
       def install
         bin.install "runecs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/meap/runecs/releases/download/v0.8.3/runecs_Darwin_arm64.tar.gz"
-      sha256 "ab9d693fceadb783a4d76f34d28dc06073a6ceb8441c59d97d8051093a4aa3a2"
+      url "https://github.com/meap/runecs/releases/download/v0.9/runecs_Darwin_arm64.tar.gz"
+      sha256 "274dab2db0415ac6da806782342aa3da181c28059e2cff11d930ce115d19bf40"
 
       def install
         bin.install "runecs"
@@ -29,22 +29,22 @@ class Runecs < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/meap/runecs/releases/download/v0.8.3/runecs_Linux_x86_64.tar.gz"
-      sha256 "cca62d17b2fe58ab67502c62ddeed435282fa80c591b3372a9b1797728766449"
+      url "https://github.com/meap/runecs/releases/download/v0.9/runecs_Linux_x86_64.tar.gz"
+      sha256 "9685b7f5cc04780121505394088d9548d8ac1044b06eaaf359bedea540b1c9fa"
       def install
         bin.install "runecs"
       end
     end
     if Hardware::CPU.arm? and !Hardware::CPU.is_64_bit?
-      url "https://github.com/meap/runecs/releases/download/v0.8.3/runecs_Linux_armv6.tar.gz"
-      sha256 "d86a4d5df05b689231456a06cd79179124c446f4507df6facced47469bf440ad"
+      url "https://github.com/meap/runecs/releases/download/v0.9/runecs_Linux_armv6.tar.gz"
+      sha256 "13e68ebc20e1376899854d3a62d1b5c7423d93ba84e9ea68cd96fff71a961191"
       def install
         bin.install "runecs"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/meap/runecs/releases/download/v0.8.3/runecs_Linux_arm64.tar.gz"
-      sha256 "15211a37bd674a356d844bb3068ed0a3e7eaf08de893a227e893c35a4fd78a63"
+      url "https://github.com/meap/runecs/releases/download/v0.9/runecs_Linux_arm64.tar.gz"
+      sha256 "7c70dcff8ed6a954f731f1580d382a2e80b6c0118b84601202ef476785feffb4"
       def install
         bin.install "runecs"
       end
